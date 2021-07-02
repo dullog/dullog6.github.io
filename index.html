@@ -1,15 +1,77 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title> Portfolio </title>
-</head>
-<body>
-<h1> My Portfolio </h1>
+<title> Menu </title>
+<script src="https://simplycodingcourses.com/files/simplyjs/simply.js"></script>
+<script>
+function start(){
+sjs.open();
 
-<a href="Game Design/Pong/index.html">Pong Game</a>
-<br/><br/>
-<a href="Game Design/Fish/index.html">Fish Game</a>
-<br/><br/>
-<a href="Game Design/Custom Game/index.html">Custom Game</a>
-<br/><br/>
+var background = new sjs.Image("Images/background.gif");
+
+var menu_text = new sjs.Text("escape", 28, "white");
+menu_text.centerH();
+
+var designBtn = new sjs.Button("Design Level", function(){
+window.location = "custom_game.html";
+});
+designBtn.centerH().offset(0,50);
+
+var level1Btn = new sjs.Button("Level 1", function(){
+window.location = "level 1.html";
+});
+level1Btn.moveTo(10,100)
+
+var level2Btn = new sjs.Button("Level 2", function(){
+window.location = "level 2.html";
+});
+level2Btn.moveTo(110,100)
+
+var level3Btn = new sjs.Button("Level 3", function(){
+window.location = "level 3.html";
+});
+level3Btn.moveTo(210,100)
+
+var level4Btn = new sjs.Button("Level 4", function(){
+window.location = "level 4.html";
+});
+level4Btn.moveTo(310,100)
+
+var level5Btn = new sjs.Button("Level 5", function(){
+window.location = "level 5.html";
+});
+level5Btn.moveTo(410,100)
+
+
+var level6Btn = new sjs.Button("Level 6", function(){
+window.location = "level 6.html";
+});
+level6Btn.moveTo(10,150)
+
+var level7Btn = new sjs.Button("Level 7", function(){
+window.location = "level 7.html";
+});
+level7Btn.moveTo(110,150)
+
+var level8Btn = new sjs.Button("Level 8", function(){
+window.location = "level 8.html";
+});
+level8Btn.moveTo(210,150)
+
+var level9Btn = new sjs.Button("Level 9", function(){
+window.location = "level 9.html";
+});
+level9Btn.moveTo(310,150)
+
+var info_text = new sjs.Text("Created By Logan", 20, "white");
+info_text.bottom().centerH();
+
+}
+</script>
+</head>
+<body onload="start()">
+<h1> escape </h1>
+
+<div id="target" style="margin:auto;background:grey;"></div>
 </body>
 </html>

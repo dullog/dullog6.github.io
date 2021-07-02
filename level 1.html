@@ -1,0 +1,134 @@
+<html>
+<head>
+<title> escape </title>
+<script src="https://simplycodingcourses.com/files/simply.js"></script>
+<script>
+var level = [];
+function start(){
+sjs.open("target",500,400);
+
+//home button
+var homeBtn = new sjs.Button("⌂", function(){
+window.location = "index.html";
+});
+
+homeBtn.offset(50,50);
+
+//background
+var background = new sjs.Image("Images/background.gif");
+
+sjs.loadImageArray('[{"width":50,"height":50,"x":450,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":400,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":350,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":301,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":251,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":201,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":153,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":104,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":56,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":7,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":350,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockTR.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":300,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":251,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBR.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":50,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":201,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":100,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":150,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":200,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":250,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":299,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":347,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":50,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":104,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBTR.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":0,"y":70,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":48,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":93,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":142,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":185,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":234,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":283,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":330,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":377,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":424,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":450,"y":0,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":450,"y":48,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":450,"y":96,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":450,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockTL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":397,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":405,"y":153,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockRL.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"},{"width":50,"height":50,"x":450,"y":103,"sx":0,"sy":0,"topSpeed":10,"src":"Images/blockBT.gif","alt":"add text","type":"block","friction":0.05,"classType":"Image"}]');
+
+
+//player
+var player = new sjs.Image("Images/idle right.gif");
+player.type = "player";
+player.setSize(40,80);
+player.bottom().left();
+player.noBounds = true;
+player.setGravity(3);
+player.friction = .3;
+player.bottom().left().offset(50,-50);
+
+//text
+var goal_txt = new sjs.Text("your goal is to escape the room. use a and d to move", 15, "white");
+
+goal_txt.center().offset(0,-100)
+
+//keydown
+var r_facing
+sjs.keyDown(D_KEY, function(){
+player.pushRight();
+player.setImage("Images/move right.GIF");
+r_facing = true;
+});
+
+sjs.keyDown(A_KEY, function(){
+player.pushLeft();
+player.setImage("Images/move left.GIF");
+r_facing = false;
+});
+
+//Jumping Code
+var canJump = true;
+sjs.keyDown(W_KEY, function(){
+if(canJump == true){
+canJump = false;
+player.pushUp(40);
+if(r_facing == true){
+player.setImage("Images/jump right.gif");
+} else {
+player.setImage("Images/jump left.gif");
+}
+} //end canJump if statement
+}); //end keyDown function
+
+sjs.onHit("player","bottom_screen",function(x,y){
+sjs.stoppedBy(x,y);
+if(canJump == false){
+canJump = true;
+}
+});
+
+
+sjs.onHit("player",["left_screen","top_screen"],function(x,y){
+sjs.stoppedBy(x,y);
+});
+
+sjs.onHit("player","block",function(x,y){
+sjs.stoppedBy(x,y);
+if(canJump == false && x.y < y.y-75){
+canJump = true;
+}
+});
+
+//shooting 
+var canShoot = true
+
+sjs.keyDown(S_KEY, function(){
+if(canShoot == true){
+canShoot = false;
+var laser = new sjs.Image("Images/laser.gif");
+laser.type = "laser";
+laser.setSize(10,5);
+laser.friction= 0;
+laser.noBounds= true;
+if(r_facing == true){
+laser.moveTo(player.getX()+44,player.getY()+50);
+laser.pushRight(25.5);
+player.setImage("Images/shoot right.gif");
+} else {
+laser.moveTo(player.getX()+-60,player.getY()+50);
+laser.pushLeft(25.5);
+player.setImage("Images/shoot left.gif");
+}
+setTimeout(function(){
+canShoot = true;
+if(r_facing == true){
+player.setImage("Images/idle right.gif");
+} else {
+player.setImage("Images/idle left.gif");
+}
+},1000);
+} //end canShoot if statement
+}); //end keyDown function DOWN_KEY
+
+//win
+sjs.onHit("player",["right_screen"],function(x,y){
+window.location = "level 2.html";
+});
+
+} //end start
+
+</script>
+</head>
+<body onload="start()">
+<h1> escape level 1 </h1>
+<center>
+</center>
+<div id="target" style="margin:auto;background:grey;"></div>
+<br/>
+<div id="output" style="margin:0 50 0 50;"></div>
+<br/><br/>
+</body>
+</html>
